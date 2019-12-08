@@ -49,8 +49,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(207, 56);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Начать заново";
+            this.button1.Text = "Принять поражение";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // pictureBox1
             // 
