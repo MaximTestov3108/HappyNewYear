@@ -37,6 +37,9 @@ namespace Game
 
       public  static void  start_game(RichTextBox wordArea)
         {
+            count_success = 0;
+            count_spaces = 0;
+
             Random random = new Random();
             int word = random.Next(0, words.Length);
             current_word = words[word];
@@ -127,12 +130,14 @@ namespace Game
                 {
                     L.ShowDialog();
                 }
+                startButton.PerformClick();
             } else if((count_spaces + count_success) == current_word.Length)
             {
                 using(Success S = new Success())
                 {
                     S.ShowDialog();
                 }
+                startButton.PerformClick();
             }
         }
         private void RichTextBox1_TextChanged(object sender, EventArgs e)
